@@ -15,12 +15,24 @@ const Login = () => {
       } 
     };
 
+    const handleGoogleLogIn = async () => {
+      try {
+        await signInWithGoogle();
+        alert("Logged In Sucessfull");
+      } catch (error) {
+        alert("Logged In Failed");
+        console.log(error);
+      }
+    }
+
+
     return (
         <LoginRegistration
             formHeading="Login"
             account="Don't Have An Account"
             link="/Module-8-Assessment-1/registration"
             onSubmit={handleLogin}
+            providerSignInGoogle={handleGoogleLogIn}
         />
     );
 };
