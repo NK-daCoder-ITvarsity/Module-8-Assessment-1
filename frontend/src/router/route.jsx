@@ -6,17 +6,17 @@ import App from "../App";
 const router = createBrowserRouter([
     {
         // Root path
-        path:"/Module-8-Assessment-1",
+        path:"/Module-8-Assessment-1/",
         element: <App/>,
 
         // outlet
         children: [
             {
-                path: "/Module-8-Assessment-1/registration",
+                path: "registration",
                 element: <Register />,
             },
             {
-                path: "/Module-8-Assessment-1/login",
+                path: "login",
                 element: <Login/>
             }
         ]
